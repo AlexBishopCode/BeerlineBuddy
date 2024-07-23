@@ -33,6 +33,13 @@ header {
     height: 70%;
     background-color: green;
 }
+
+.fa-regular {
+    align-content: center;
+    margin: auto;
+    font-size: 35px;
+}
+
 .internal-step-div-bottom {
     display: flex;
     height: 30%;
