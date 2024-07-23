@@ -8,3 +8,33 @@ html {
 body {
     background-color: cyan
 }
+header {
+   text-align: center;
+   font-size: xx-large;
+   margin: 2%;
+}
+
+.section-div {
+    display: flex;
+    max-width: 100vw;
+    height: 200px;
+    background-color: red;
+}
+
+.step-div {
+    flex-flow: row;
+    background-color: yellow;
+    width: 50%;
+    height: 100%;
+}
+
+.internal-step-div-top {
+    display: flex;
+    height: 70%;
+    background-color: green;
+}
+.internal-step-div-bottom {
+    display: flex;
+    height: 30%;
+    background-color: purple;
+}
