@@ -40,10 +40,10 @@ header {
     font-size: 35px;
 }
 
-.fa-regular:hover {
+/* .fa-regular:hover {
     color: white;
     cursor: pointer;
-}
+} */
 
 .internal-step-div-bottom {
     display: flex;
