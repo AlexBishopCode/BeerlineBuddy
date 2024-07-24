@@ -23,9 +23,12 @@ function ticketBox(event) {
     }
 }
 // Add click event
+
 document.querySelectorAll('.fa-circle').forEach(faCircleElement => {
     faCircleElement.addEventListener('click', ticketBox);
 });
+
+//Timers 
 
 document.getElementById('timer-button-one').addEventListener('click', () => {
 
@@ -93,6 +96,7 @@ document.getElementById('timer-button-three').addEventListener('click', () => {
     }, 1000);
     });
 
+// Hidden Div
 
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.clickable-button');
