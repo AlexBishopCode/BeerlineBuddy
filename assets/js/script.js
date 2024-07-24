@@ -29,39 +29,69 @@ document.querySelectorAll('.fa-circle').forEach(faCircleElement => {
 
 document.getElementById('timer-button-one').addEventListener('click', () => {
 
-let timerOne = 900;
+let timerOne = 600;
 
 const intervalOne = setInterval(() => {
     timerOne--;
-    document.getElementById('timer1').innerText=`${timerOne} seconds`;
-    if (timerOne < 1) {clearInterval(intervalOne)};
+
+    const minutes = Math.floor(timerOne / 60);
+    const seconds = timerOne % 60;
+    
+    const constructMinutes = minutes.toString().padStart(2, '0');
+    const constructSeconds = seconds.toString().padStart(2, '0');
+
+    document.getElementById('timer1').innerText = `${constructMinutes}:${constructSeconds}`;
+    if (timerOne < 1) {
+        clearInterval(intervalOne);
+        document.getElementById('timer1').innerText = "Pull two more jugs then start timer 2";
+    }
     console.log(timerOne);
 }, 1000);
 });
 
 document.getElementById('timer-button-two').addEventListener('click', () => {
 
-let timerTwo = 900;
+let timerTwo = 600;
 
 const intervalTwo = setInterval(() => {
     timerTwo--;
-    document.getElementById('timer2').innerText=`${timerTwo} seconds`;
-    if (timerTwo < 1) {clearInterval(intervalTwo)};
+
+    const minutes = Math.floor(timerTwo / 60);
+    const seconds = timerTwo % 60;
+    
+    const constructMinutes = minutes.toString().padStart(2, '0');
+    const constructSeconds = seconds.toString().padStart(2, '0');
+
+    document.getElementById('timer2').innerText = `${constructMinutes}:${constructSeconds}`;
+    if (timerTwo < 1) {
+        clearInterval(intervalTwo);
+        document.getElementById('timer2').innerText = "Pull two more jugs then start timer 3";
+    }
     console.log(timerTwo);
 }, 1000);
 });
 
 document.getElementById('timer-button-three').addEventListener('click', () => {
 
-let timerThree = 900;
+    let timerThree = 600;
 
-const intervalThree = setInterval(() => {
-    timerThree--;
-    document.getElementById('timer3').innerText=`${timerThree} seconds`;
-    if (timerThree < 1) {clearInterval(intervalThree)};
-    console.log(timerThree);
-}, 1000);
-});
+    const intervalThree = setInterval(() => {
+        timerThree--;
+    
+        const minutes = Math.floor(timerThree / 60);
+        const seconds = timerThree % 60;
+        
+        const constructMinutes = minutes.toString().padStart(2, '0');
+        const constructSeconds = seconds.toString().padStart(2, '0');
+    
+        document.getElementById('timer3').innerText = `${constructMinutes}:${constructSeconds}`;
+        if (timerThree < 1) {
+            clearInterval(intervalThree);
+            document.getElementById('timer3').innerText = "Finished, Please move onto the step six";
+        }
+        console.log(timerThree);
+    }, 1000);
+    });
 
 
 document.addEventListener('DOMContentLoaded', () => {
