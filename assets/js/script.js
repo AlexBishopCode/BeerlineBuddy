@@ -12,3 +12,55 @@ for(const checkBox of checkBoxes) {
 
 checkBox.addEventListener('click', (event) => tickBox(event))
 }
+
+// Change Div Color 
+function ticketBox(event) {
+    const targetDivId = event.target.getAttribute('data-target');
+    const targetDiv = document.getElementById(targetDivId);
+    
+    if (targetDiv) {
+        targetDiv.style.backgroundColor = 'blue';
+    }
+}
+// Add click event
+document.querySelectorAll('.fa-circle').forEach(faCircleElement => {
+    faCircleElement.addEventListener('click', ticketBox);
+});
+
+document.getElementById('timer-button-one').addEventListener('click', () => {
+
+let timerOne = 900
+
+const intervalOne = setInterval(() => {
+    timerOne-- 
+    document.getElementById('timer1').innerText=`${timerOne} seconds`
+    if (timerOne < 1) {clearInterval(intervalOne)}
+    console.log(timerOne);
+}, 1000);
+})
+
+document.getElementById('timer-button-two').addEventListener('click', () => {
+
+let timerOne = 900
+
+const intervalTwo = setInterval(() => {
+    timerOne-- 
+    document.getElementById('timer2').innerText=`${timerOne} seconds`
+    if (timerOne < 1) {clearInterval(intervalTwo)}
+    console.log(timerOne);
+}, 1000);
+})
+
+document.getElementById('timer-button-three').addEventListener('click', () => {
+
+let timerOne = 900
+
+const intervalThree = setInterval(() => {
+    timerOne-- 
+    document.getElementById('timer3').innerText=`${timerOne} seconds`
+    if (timerOne < 1) {clearInterval(intervalThree)}
+    console.log(timerOne);
+}, 1000);
+})
+
+

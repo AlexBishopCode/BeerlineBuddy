@@ -16,17 +16,34 @@
     <section>
         <div class="section-div">
             <div class="step-div">
-                <div class="internal-step-div-top">
-                </div>
-                <div class="internal-step-div-bottom">
-                    <i id="checkbox-one" class="fa-regular fa-circle" style="color: #828282;"></i>
+                <div class="internal-step-div-top"></div>
+                <div class="internal-step-div-bottom" id="step-div-one">
+                    <i id="checkbox-one" class="fa-regular fa-circle" data-target="step-div-one"></i>
                 </div>
             </div>
             <div class="step-div">
                 <div class="internal-step-div-top"></div>
-                <div class="internal-step-div-bottom">
-                    <i class="fa-regular fa-circle" style="color: #828282;"></i>
+                <div class="internal-step-div-bottom" id="step-div-two">
+                    <i class="fa-regular fa-circle" data-target="step-div-two"></i>
                 </div>
+            </div>
+        </div>
+        <div>
+            <div class="timer-div">
+                <div class="timer" id="timer1">900</div>
+                <button id="timer-button-one" data-target="timer1">First Timer</button>
+            </div>
+        </div>
+        <div>
+            <div class="timer-div">
+                <div class="timer" id="timer2">900</div>
+                <button id="timer-button-two" data-target="timer2">Second Timer</button>
+            </div>
+        </div>
+        <div>
+            <div class="timer-div">
+                <div class="timer" id="timer3">900</div>
+                <button id="timer-button-three" data-target="timer3">Third Timer</button>
             </div>
         </div>
     </section>
