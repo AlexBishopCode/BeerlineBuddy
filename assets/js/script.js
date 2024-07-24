@@ -62,5 +62,3 @@ const intervalThree = setInterval(() => {
     console.log(timerThree);
 }, 1000);
 })
-
-
