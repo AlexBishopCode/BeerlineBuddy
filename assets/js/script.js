@@ -41,25 +41,25 @@ const intervalOne = setInterval(() => {
 
 document.getElementById('timer-button-two').addEventListener('click', () => {
 
-let timerOne = 900
+let timerTwo = 900
 
 const intervalTwo = setInterval(() => {
-    timerOne-- 
-    document.getElementById('timer2').innerText=`${timerOne} seconds`
-    if (timerOne < 1) {clearInterval(intervalTwo)}
-    console.log(timerOne);
+    timerTwo-- 
+    document.getElementById('timer2').innerText=`${timerTwo} seconds`
+    if (timerTwo < 1) {clearInterval(intervalTwo)}
+    console.log(timerTwo);
 }, 1000);
 })
 
 document.getElementById('timer-button-three').addEventListener('click', () => {
 
-let timerOne = 900
+let timerThree = 900
 
 const intervalThree = setInterval(() => {
-    timerOne-- 
-    document.getElementById('timer3').innerText=`${timerOne} seconds`
-    if (timerOne < 1) {clearInterval(intervalThree)}
-    console.log(timerOne);
+    timerThree-- 
+    document.getElementById('timer3').innerText=`${timerThree} seconds`
+    if (timerThree < 1) {clearInterval(intervalThree)}
+    console.log(timerThree);
 }, 1000);
 })
 
