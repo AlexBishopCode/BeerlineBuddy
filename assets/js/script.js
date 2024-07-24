@@ -63,4 +63,21 @@ const intervalThree = setInterval(() => {
 }, 1000);
 });
 
-// checkbox available
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.clickable-button');
+    const hiddenDiv = document.getElementById('hiddenDiv');
+    const clickedButtons = new Set();
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            clickedButtons.add(button);
+
+            // Check if the number of clicked buttons matches the total number of buttons
+            if (clickedButtons.size === buttons.length) {
+                hiddenDiv.style.display = 'block';
+            }
+        });
+    });
+});
+

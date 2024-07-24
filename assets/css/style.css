@@ -39,6 +39,27 @@ header {
     align-content: center;
     margin: auto;
     font-size: 35px;
+    color: gray;
+}
+
+.fa-regular:hover {
+    transition: 0.2s;
+    transform: scale(1.2);
+}
+
+.fa-circle-check {
+    align-content: center;
+    margin: auto;
+    font-size: 35px;
+    color: white;
+    transition: 0.3s;
+}
+
+.active {
+    align-content: center;
+    margin: auto;
+    font-size: 35px;
+    color: pink;
 }
 
 /* .fa-regular:hover {
@@ -65,4 +86,15 @@ header {
     display: flex;
     flex-flow: column;
     background-color: yellow;
+}
+
+#hiddenDiv {
+    display: none;
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #000;
 }
