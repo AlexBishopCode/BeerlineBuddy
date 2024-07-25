@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Check if the number of clicked buttons matches the total number of buttons
             if (clickedButtons.size === buttons.length) {
                 hiddenDiv.style.display = 'block';
+                hiddenDiv.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
@@ -147,3 +148,16 @@ document.getElementById('next-button').addEventListener('click', () => {
 });
 
 updateStep(); // Initialize with the first step
+
+//Reset Button
+//https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+
+document.addEventListener("DOMContentLoaded", function() {
+    const resetButton = document.getElementById("reset-button");
+
+    resetButton.addEventListener('click', function() {
+        window.location.reload();
+        window.scrollTo(0, 0);
+    });
+});
+
