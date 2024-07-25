@@ -10,15 +10,24 @@
 <body>
     <header>Beerline Buddy</header>
     <section>
-        <h1>Introduction</h1>
-        <h2>How to use</h2>
+        <div><h1>Introduction</h1></div>
+        <div id="instruction-div">
+            <div id="previous-button-div">
+                <button id="previous-button" disabled>Previous</button>
+            </div>
+            <div id="instruction-text">
+            </div>
+            <div id="next-button-div">
+                <button id="next-button">Next</button>
+            </div>
+        </div>
     </section>
     <section>
         <div class="section-div-one">
             <div class="step-div" id="step-one-div">
                 <div class="internal-step-div-top"></div>
                 <div class="internal-step-div-bottom" id="step-div-one">
-                    <i id="checkbox1" class="fa-regular fa-circle clickable-button" data-target="step-div-one"></i>
+                    <i id="checkbox1" class="fa-regular fa-circle clickable-button enabled" data-target="step-div-one"></i>
                 </div>
             </div>
             <div class="step-div" id="step-two-div">

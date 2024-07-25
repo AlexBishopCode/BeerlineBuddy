@@ -19,7 +19,8 @@ function ticketBox(event) {
     const targetDiv = document.getElementById(targetDivId);
     
     if (targetDiv) {
-        targetDiv.style.backgroundColor = 'blue';
+        targetDiv.style.backgroundColor = 'pink';
+        targetDiv.style.transition = '0.7s';
     }
 }
 // Add click event
@@ -115,3 +116,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const steps = [
+    "Slide 1: Welcome to Beerline Buddy!",
+    "Please follow the steps below using the checklist and timers",
+    "Before you start here is what you  will need",
+    "Safety info",
+    "Good luck!"
+];
+
+let currentStep = 0;
+
+function updateStep() {
+    document.getElementById('instruction-text').innerText = steps[currentStep];
+    document.getElementById('previous-button').disabled = currentStep === 0;
+    document.getElementById('next-button').disabled = currentStep === steps.length - 1;
+}
+
+document.getElementById('previous-button').addEventListener('click', () => {
+    if (currentStep > 0) {
+        currentStep--;
+        updateStep();
+    }
+});
+
+document.getElementById('next-button').addEventListener('click', () => {
+    if (currentStep < steps.length - 1) {
+        currentStep++;
+        updateStep();
+    }
+});
+
+updateStep(); // Initialize with the first step
